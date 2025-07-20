@@ -3,69 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AJ Board Game Store</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #f5f5f5;
-            padding: 10px 30px;
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #d35400;
         }
-        .logo {
-            display: flex;
-            align-items: center;
-            font-weight: bold;
-            font-size: 1.5em;
+        .bg-main {
+            background-color: #d35400 !important;
         }
-        .logo img {
-            height: 40px;
-            margin-right: 10px;
+        .text-main {
+            color: #d35400 !important;
         }
-        .menu {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-            margin: 0;
-            padding: 0;
+        .border-main {
+            border-color: #d35400 !important;
         }
-        .menu li a {
-            text-decoration: none;
-            color: #333;
-            font-size: 1em;
-            transition: color 0.2s;
+        .btn-main {
+            background-color: #d35400 !important;
+            color: #fff !important;
         }
-        .menu li a:hover {
-            color: #007bff;
+        .btn-main:hover {
+            background-color: #b34700 !important;
+        }
+        .section-light {
+            background-color: #f7c59f !important;
         }
     </style>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="โลโก้ร้าน">
-            ร้านเอเจ
+<body class="text-gray-800 bg-main">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="https://cdn.pixabay.com/photo/2017/01/06/19/15/board-games-1959197_1280.jpg" alt="AJ Board Game Logo" class="h-10 w-10 rounded-full mr-2 object-cover">
+                <span class="text-xl font-bold text-main">AJ Board Game</span>
+            </div>
+            <!-- Navigation -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="font-medium transition-colors duration-200 btn-main rounded-md">หน้าแรก</a>
+                <a href="aboutus.html" class="font-medium transition-colors duration-200 btn-main rounded-md">เกี่ยวกับเรา</a>
+                <a href="Product.html" class="font-medium transition-colors duration-200 btn-main rounded-md">สินค้า</a>
+                <a href="contact.html" class="font-medium transition-colors duration-200 btn-main rounded-md">ติดต่อเรา</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden p-2 rounded-md hover:bg-orange-100 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
         </div>
-        <ul class="menu">
-            <li><a href="index.html">หน้าแรก</a></li>
-            <li><a href="aboutus.html">เกี่ยวกับเรา</a></li>
-            <li><a href="Product.html">สินค้า</a></li>
-            <li><a href="contact.html">ติดต่อเรา</a></li>
-        </ul>
-    </nav>
+    </header>
 
-    <!-- แบนเนอร์อาหารตามสั่ง -->
-    <div style="width:100%; background:#ffe5b4; padding:40px 0; text-align:center; margin-bottom:30px;">
-        <img src="Background-of-Interior-Design-in-Cardboard-Board-Game-Store_2471574_wh1200.png" alt="อาหารตามสั่ง" style="width:300px; border-radius:20px; box-shadow:0 4px 16px rgba(0,0,0,0.1);">
-        <h2 style="margin-top:20px; font-size:2em; color:#d35400;">ขายทุกอย่าง ที่ถูกกฎหมาย!</h2>
-        <p style="font-size:1.2em; color:#333;">ของหลากหลาย ชำรุดไม่รับเปลี่ยน </p>
-    </div>
-    
+    <!-- Banner Section -->
+    <section class="w-full py-12 mb-8 section-light">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-8">
+            <img src="https://cdn.pixabay.com/photo/2017/01/06/19/15/board-games-1959197_1280.jpg" alt="ร้านขายบอร์ดเกม" class="rounded-2xl shadow-xl w-full md:w-1/3 h-auto object-cover">
+            <div class="md:w-2/3 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-main">
+                    ร้านเอเจตามสั่ง <span class="text-white bg-main rounded-md px-2">สำหรับทุกวัย</span>
+                </h1>
+                <p class="text-lg md:text-xl text-white mb-8 max-w-xl mx-auto md:mx-0 bg-main rounded-md p-2">
+                    รวมสินค้ายอดนิยม ขายได้ทั้งครอบครัวและเพื่อนฝูง พร้อมกิจกรรมและโปรโมชั่นมากมาย
+                </p>
+                <a href="Product.html" class="font-semibold py-3 px-8 rounded-full shadow-lg transition-transform duration-200 hover:scale-105 btn-main inline-block">
+                    ดูสินค้า/สั่งซื้อบอร์ดเกม
+                </a>
+            </div>
+        </div>
+    </section>
 
-    <h1>ร้านเอเจตามสั่ง ขายทุกอย่าง ยกเว้นของมีประโยชน์</h1>
-    <p>อร่อยเกินราคา</p>
+    <!-- Board Game Example Section -->
+    <section class="py-12 section-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center text-main">สินค้ายอดนิยม</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 justify-items-center">
+                <!-- Board Game 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center border-2 border-main">
+                    <img src="Ultimate Werewolf.jpg" alt="Catan" class="w-full h-32 object-cover rounded-md mb-4">
+                    <h3 class="text-lg font-semibold mb-2 text-main">Catan</h3>
+                    <p class="text-gray-600 text-sm">เกมสร้างอาณานิคมและแลกเปลี่ยนทรัพยากรยอดนิยม</p>
+                </div>
+                <!-- Board Game 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center border-2 border-main">
+                    <img src="sg-11134201-22120-ulce193jlklv14.webp" alt="Ticket to Ride" class="w-full h-32 object-cover rounded-md mb-4">
+                    <h3 class="text-lg font-semibold mb-2 text-main">Ticket to Ride</h3>
+                    <p class="text-gray-600 text-sm">สร้างเส้นทางรถไฟทั่วโลก แข่งขันกับเพื่อนๆ</p>
+                </div>
+                <!-- Board Game 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center border-2 border-main">
+                    <img src="เสื้อ.webp" alt="Carcassonne" class="w-full h-32 object-cover rounded-md mb-4">
+                    <h3 class="text-lg font-semibold mb-2 text-main">Carcassonne</h3>
+                    <p class="text-gray-600 text-sm">วางแผ่นดิน สร้างเมืองและถนน เก็บคะแนนให้มากที่สุด</p>
+                </div>
+                <!-- Board Game 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center border-2 border-main">
+                    <img src="cap.webp" alt="Dixit" class="w-full h-32 object-cover rounded-md mb-4">
+                    <h3 class="text-lg font-semibold mb-2 text-main">Dixit</h3>
+                    <p class="text-gray-600 text-sm">เกมทายภาพจากคำใบ้ เสริมจินตนาการและความคิดสร้างสรรค์</p>
+                </div>
+                <!-- Board Game 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center border-2 border-main">
+                    <img src="เสื้อบางแสน.webp" alt="Splendor" class="w-full h-32 object-cover rounded-md mb-4">
+                    <h3 class="text-lg font-semibold mb-2 text-main">Splendor</h3>
+                    <p class="text-gray-600 text-sm">สะสมอัญมณีและการ์ดเพื่อเป็นพ่อค้าอันดับหนึ่ง</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-   
+    <!-- About Us Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl md:text-4xl font-bold text-main mb-6">เกี่ยวกับร้าน</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    ร้านเอเจบอร์ดเกม คือแหล่งรวมบอร์ดเกมสำหรับทุกวัย ไม่ว่าจะเป็นเกมครอบครัว เกมกลยุทธ์ หรือเกมปาร์ตี้ เราคัดสรรบอร์ดเกมคุณภาพจากทั่วโลก พร้อมให้คำแนะนำและบริการอย่างเป็นกันเอง
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    พบกับกิจกรรมเล่นเกมและโปรโมชั่นสุดพิเศษได้ที่หน้าร้านและออนไลน์ สนุกทุกเกม ได้เพื่อนใหม่ทุกครั้งที่เล่น!
+                </p>
+            </div>
+            <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                <img src="https://cdn.pixabay.com/photo/2017/01/06/19/15/board-games-1959197_1280.jpg" alt="Board Game 1" class="rounded-xl shadow-md w-full h-auto object-cover">
+                <img src="https://cdn.pixabay.com/photo/2016/03/27/21/36/board-game-1284012_1280.jpg" alt="Board Game 2" class="rounded-xl shadow-md w-full h-auto object-cover">
+                <img src="https://cdn.pixabay.com/photo/2017/01/06/19/15/board-games-1959197_1280.jpg" alt="Board Game 3" class="rounded-xl shadow-md w-full h-auto object-cover">
+                <img src="https://cdn.pixabay.com/photo/2016/03/27/21/36/board-game-1284012_1280.jpg" alt="Board Game 4" class="rounded-xl shadow-md w-full h-auto object-cover">
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
