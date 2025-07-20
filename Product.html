@@ -127,12 +127,65 @@
             font-weight: bold;
             font-size: 1.5em;
         }
+        .navbar {
+            background: #fff6ec;
+            border-bottom: 2px solid #ffd6b0;
+            padding: 0 0 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.7em;
+            color: #d35400;
+            font-weight: bold;
+            margin-left: 32px;
+        }
+        .logo img {
+            height: 40px;
+            margin-right: 12px;
+        }
+        .menu {
+            display: flex;
+            gap: 10px;
+            margin-right: 32px;
+            list-style: none;
+            padding: 0;
+        }
+        .menu li {
+            display: inline-block;
+        }
+        .menu a, .menu button {
+            background: #ffd6b0;
+            color: #d35400;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 28px;
+            font-size: 1.1em;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s, color 0.2s;
+            cursor: pointer;
+            box-shadow: 0 1px 4px rgba(211,84,0,0.07);
+        }
+        .menu a:hover, .menu button:hover {
+            background: #d35400;
+            color: #fff6ec;
+        }.hero {
+            background: #fff6ec;
+            padding: 60px 0 40px 0;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar">
+
+<nav class="navbar">
         <div class="logo">
-            <img src="." alt="โลโก้ร้าน">
+            <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="โลโก้ร้าน">
             ร้านเอเจ
         </div>
         <ul class="menu">
@@ -142,10 +195,6 @@
             <li><a href="contact.html">ติดต่อเรา</a></li>
         </ul>
     </nav>
-
-    <!-- แบนเนอร์อาหารตามสั่ง -->
-
-    
 
     <div class="container">
         <h1>สินค้าทั้งหมด</h1>
