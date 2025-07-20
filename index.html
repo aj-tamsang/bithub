@@ -6,38 +6,73 @@
     <title>Document</title>
     <style>
         
+       body {
+            background: #fff6ec;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
         .navbar {
+            background: #fff6ec;
+            border-bottom: 2px solid #ffd6b0;
+            padding: 0 0 0 0;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            background: #f5f5f5;
-            padding: 10px 30px;
+            justify-content: space-between;
+            height: 64px;
         }
         .logo {
             display: flex;
             align-items: center;
+            font-size: 1.7em;
+            color: #d35400;
             font-weight: bold;
-            font-size: 1.5em;
+            margin-left: 32px;
         }
         .logo img {
             height: 40px;
-            margin-right: 10px;
+            margin-right: 12px;
         }
         .menu {
-            list-style: none;
             display: flex;
-            gap: 25px;
-            margin: 0;
+            gap: 10px;
+            margin-right: 32px;
+            list-style: none;
             padding: 0;
         }
-        .menu li a {
-            text-decoration: none;
-            color: #333;
-            font-size: 1em;
-            transition: color 0.2s;
+        .menu li {
+            display: inline-block;
         }
-        .menu li a:hover {
-            color: #007bff;
+        .menu a, .menu button {
+            background: #ffd6b0;
+            color: #d35400;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 28px;
+            font-size: 1.1em;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s, color 0.2s;
+            cursor: pointer;
+            box-shadow: 0 1px 4px rgba(211,84,0,0.07);
+        }
+        .menu a:hover, .menu button:hover {
+            background: #d35400;
+            color: #fff6ec;
+        }.hero {
+            background: #fff6ec;
+            padding: 60px 0 40px 0;
+            text-align: center;
+        }
+        .hero-title {
+            font-size: 2.8em;
+            color: #d35400;
+            font-family: 'Georgia', serif;
+            margin-bottom: 12px;
+        }
+        .hero-desc {
+            font-size: 1.3em;
+            color: #a65c1a;
+            margin-bottom: 24px;
         }
     </style>
 </head>
@@ -54,17 +89,12 @@
             <li><a href="contact.html">ติดต่อเรา</a></li>
         </ul>
     </nav>
-
-    <!-- แบนเนอร์อาหารตามสั่ง -->
-    <div style="width:100%; background:#ffe5b4; padding:40px 0; text-align:center; margin-bottom:30px;">
-        <img src="Background-of-Interior-Design-in-Cardboard-Board-Game-Store_2471574_wh1200.png" alt="อาหารตามสั่ง" style="width:300px; border-radius:20px; box-shadow:0 4px 16px rgba(0,0,0,0.1);">
-        <h2 style="margin-top:20px; font-size:2em; color:#d35400;">ขายทุกอย่าง ที่ถูกกฎหมาย!</h2>
-        <p style="font-size:1.2em; color:#333;">ของหลากหลาย ชำรุดไม่รับเปลี่ยน </p>
-    </div>
-    
-
-    <h1>ร้านเอเจตามสั่ง ขายทุกอย่าง ยกเว้นของมีประโยชน์</h1>
-    <p>อร่อยเกินราคา</p>
+    <div class="hero">
+        <div class="hero-title">ร้าน AJ ตามสั่ง</div>
+        <div class="hero-desc">
+            ขายทุกอย่าง ที่ถูกกฎหมาย!<br>
+            ของหลากหลาย ชำรุดไม่รับเปลี่ยน
+        </div>
 
    
 </body>
