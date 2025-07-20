@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ติดต่อร้านเอเจตามสั่ง</title>
+    <!-- Google Fonts: Prompt -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Prompt', Arial, sans-serif;
+            background: #fffbe6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .navbar {
+            background: #fff6ec;
+            border-bottom: 2px solid #ffd6b0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.7em;
+            color: #d35400;
+            font-weight: bold;
+            margin-left: 32px;
+        }
+        .logo img {
+            height: 40px;
+            margin-right: 12px;
+        }
+        .menu {
+            display: flex;
+            gap: 10px;
+            margin-right: 32px;
+            list-style: none;
+            padding: 0;
+        }
+        .menu li {
+            display: inline-block;
+        }
+        .menu a, .menu button {
+            background: #ffd6b0;
+            color: #d35400;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 28px;
+            font-size: 1.1em;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s, color 0.2s;
+            cursor: pointer;
+            box-shadow: 0 1px 4px rgba(211,84,0,0.07);
+        }
+        .menu a:hover, .menu button:hover {
+            background: #d35400;
+            color: #fff6ec;
+        }
+        .banner {
+            background: linear-gradient(180deg, #fff3e0 60%, #ffe9d6 100%);
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            border-radius: 24px 24px 0 0;
+            box-shadow: 0 2px 16px rgba(211,84,0,0.08);
+            margin: 32px auto 0 auto;
+            max-width: 1100px;
+            position: relative;
+            overflow: hidden;
+        }
+        .banner::after {
+            content: "";
+            position: absolute;
+            right: 40px;
+            bottom: 20px;
+            width: 90px;
+            height: 90px;
+            background: url('https://cdn-icons-png.flaticon.com/512/616/616494.png') no-repeat center/contain;
+            opacity: 0.08;
+            pointer-events: none;
+        }
+        .shop-name {
+            font-size: 2.8rem;
+            color: #d35400;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            margin-top: 56px;
+            text-shadow: 0 2px 8px #ffe9d6;
+        }
+        .shop-desc {
+            font-size: 1.25rem;
+            color: #d35400;
+            margin-bottom: 40px;
+            font-style: italic;
+            text-align: center;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+        .main-footer {
+            background: #fff;
+            max-width: 1100px;
+            margin: -40px auto 0 auto;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(211,84,0,0.10);
+            padding: 48px 40px 32px 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 32px;
+            position: relative;
+            z-index: 2;
+        }
+        .footer-col {
+            flex: 1 1 320px;
+            min-width: 260px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .footer-logo {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #d35400;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .footer-logo::before {
+            content: '';
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            background: url('https://cdn-icons-png.flaticon.com/512/616/616494.png') no-repeat center/contain;
+            opacity: 0.7;
+        }
+        .footer-desc {
+            color: #d35400;
+            font-size: 1.08rem;
+            margin-bottom: 18px;
+            line-height: 1.8;
+        }
+        .contact-title {
+            font-size: 1.18rem;
+            color: #d35400;
+            font-weight: bold;
+            margin-bottom: 14px;
+            letter-spacing: 1px;
+        }
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 12px 0;
+            font-size: 1.08rem;
+            color: #333;
+            line-height: 2.1;
+        }
+        .contact-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .contact-list b {
+            min-width: 70px;
+            display: inline-block;
+            color: #d35400;
+            font-weight: 600;
+        }
+        .contact-list i {
+            color: #d35400;
+            font-size: 1.2em;
+            margin-right: 6px;
+            width: 22px;
+            text-align: center;
+        }
+        .contact-list a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .contact-list a:hover {
+            color: #b85c00;
+            text-decoration: underline;
+        }
+        .contact-icons {
+            display: flex;
+            gap: 18px;
+            margin-top: 8px;
+        }
+        .contact-icons a {
+            color: #d35400;
+            font-size: 1.7rem;
+            transition: color 0.2s;
+            background: #fffbe6;
+            border-radius: 50%;
+            padding: 8px;
+            box-shadow: 0 2px 8px rgba(211,84,0,0.07);
+        }
+        .contact-icons a:hover {
+            color: #fff;
+            background: #d35400;
+        }
+        .footer-divider {
+            width: 1px;
+            background: #ffe9d6;
+            margin: 0 32px;
+            min-height: 140px;
+            align-self: stretch;
+        }
+        .footer-bottom {
+            text-align: center;
+            color: #b85c00;
+            font-size: 1rem;
+            margin: 40px 0 18px 0;
+            opacity: 0.85;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 900px) {
+            .main-footer {
+                flex-direction: column;
+                gap: 0;
+                padding: 32px 16px 18px 16px;
+            }
+            .footer-col {
+                margin-bottom: 24px;
+                min-width: 0;
+            }
+            .footer-divider {
+                display: none;
+            }
+            .banner {
+                border-radius: 0 0 18px 18px;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="โลโก้ร้าน">
+            ร้านเอเจ
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="article.html">บทความ</a></li>
+            <li><a href="aboutus.html">เกี่ยวกับเรา</a></li>
+            <li><a href="Product.html">สินค้า</a></li>
+            <li><a href="contact.html">ติดต่อเรา</a></li>
+        </ul>
+    </nav>
+    <div class="banner">
+        <div class="shop-name">ร้านเอเจตามสั่ง</div>
+        <div class="shop-desc">
+            ขายของกระจุกกระจิกน่ารักกรุบกริบ ของขวัญ ของใช้ ของตกแต่ง เพิ่มความสดใสให้ทุกวันในโทนสีเหลืองอบอุ่น 💛
+        </div>
+        <img 
+            src="https://cdn.pixabay.com/photo/2022/10/20/18/46/hamburger-7535477_1280.png" 
+            alt="การ์ตูนแฮมเบอร์เกอร์น่ารัก" 
+            style="width:110px; margin-bottom:-40px; margin-top:10px; filter: drop-shadow(0 4px 12px #ffd6b0);"
+        >
+    </div>
+    <div class="main-footer">
+        <div class="footer-col">
+            <div class="footer-logo"><i class="fa-solid fa-gift"></i> AJ ตามสั่ง</div>
+            <div class="footer-desc">
+                ขายของกระจุกกระจิกน่ารักกรุบกริบ ของขวัญ ของใช้ ของตกแต่ง เพิ่มความสดใสให้ทุกวัน หากคุณกำลังมองหาของขวัญหรือของตกแต่งที่ไม่เหมือนใคร ให้นึกถึงเรา ร้านเอเจตามสั่ง พร้อมให้บริการด้วยความจริงใจและความสนุกสนานในทุกการเลือกซื้อ 
+
+
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-col">
+            <div class="contact-title">ติดต่อเรา</div>
+            <ul class="contact-list">
+                <li><i class="fas fa-phone"></i><b>โทร:</b> <a href="tel:0812345678">081-234-5678</a></li>
+                <li><i class="fab fa-line"></i><b>LINE:</b> <a href="https://line.me/R/ti/p/@ajshop" target="_blank">@ajshop</a></li>
+                <li><i class="fab fa-facebook"></i><b>Facebook:</b> <a href="https://facebook.com/ajshopcute" target="_blank">facebook.com/ajshopcute</a></li>
+                <li><i class="fas fa-envelope"></i><b>อีเมล:</b> <a href="mailto:ajshop@email.com">ajshop@email.com</a></li>
+                <li><i class="fas fa-map-marker-alt"></i><b>ที่อยู่:</b> 123/45 ถนนสุขใจ แขวงสุขสันต์ เขตสุขุม กรุงเทพฯ 10200</li>
+            </ul>
+            <div class="contact-icons">
+                <a href="tel:0812345678" title="โทรศัพท์"><i class="fas fa-phone"></i></a>
+                <a href="https://line.me/R/ti/p/@ajshop" target="_blank" title="LINE"><i class="fab fa-line"></i></a>
+                <a href="https://facebook.com/ajshopcute" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="mailto:ajshop@email.com" title="อีเมล"><i class="fas fa-envelope"></i></a>
+                <a href="https://goo.gl/maps/xxxx" target="_blank" title="แผนที่"><i class="fas fa-map-marker-alt"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        Copyright © 2025 ร้านเอเจตามสั่ง
+    </div>
+</body>
+
+</html>
