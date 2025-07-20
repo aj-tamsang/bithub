@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -11,6 +10,54 @@
             background: linear-gradient(135deg, #fff6e3 0%, #ffd6b0 100%);
             margin: 0;
             padding: 0;
+        }
+        .navbar {
+            background: #fff6ec;
+            border-bottom: 2px solid #ffd6b0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.7em;
+            color: #d35400;
+            font-weight: bold;
+            margin-left: 32px;
+        }
+        .logo img {
+            height: 40px;
+            margin-right: 12px;
+        }
+        .menu {
+            display: flex;
+            gap: 10px;
+            margin-right: 32px;
+            list-style: none;
+            padding: 0;
+        }
+        .menu li {
+            display: inline-block;
+        }
+        .menu a, .menu button {
+            background: #ffd6b0;
+            color: #d35400;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 28px;
+            font-size: 1.1em;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s, color 0.2s;
+            cursor: pointer;
+            box-shadow: 0 1px 4px rgba(211,84,0,0.07);
+        }
+        .menu a:hover, .menu button:hover {
+            background: #d35400;
+            color: #fff6ec;
         }
         .container {
             max-width: 800px;
@@ -36,7 +83,7 @@
             border-radius: 2px;
         }
         p {
-            color: #a04000;
+            color: #a65c1a;
             font-size: 1.2rem;
             line-height: 1.8;
             margin-bottom: 24px;
@@ -50,7 +97,7 @@
             margin-top: 32px;
         }
         .member {
-            background: #ffe5d0;
+            background: #ffd6b0;
             border-radius: 12px;
             padding: 24px 16px;
             width: 220px;
@@ -84,10 +131,25 @@
             .container { padding: 24px 8px; }
             .team { gap: 16px; }
             .member { width: 100%; }
+            .navbar { flex-direction: column; height: auto; }
+            .logo { margin-left: 0; margin-bottom: 8px; }
+            .menu { margin-right: 0; }
         }
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="โลโก้ร้าน">
+            ร้านเอเจ
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="aboutus.html">เกี่ยวกับเรา</a></li>
+            <li><a href="Product.html">สินค้า</a></li>
+            <li><a href="contact.html">ติดต่อเรา</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <h1>เกี่ยวกับ BitHub</h1>
         <hr class="divider">
@@ -128,6 +190,4 @@
     </div>
 </body>
 </html>
-=======
-fgfghfgjhjghjคสช
->>>>>>> 82f0982efe3ae58ad13028561172e7b710c31378
+
